@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+    font-family: var(--primary-font);
+    font-size: 16px;
+}
+
+/* some resets */
+.container{
+    max-width: 1200px;
+}
+a{
+    text-decoration: none !important;
+    outline: none !important;
+}
+.btn,button,.form-control{
+    box-shadow: none !important;
+    outline: none !important;
+}
+ul{list-style: none; margin: 0 !important; padding: 0 !important;}
+
+/* classes i'll required */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* component styling */
+.btn{
+    min-width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid var(--pink);
+    font-size: 1rem;
+}
+.btn.solid{
+    background: var(--pink);
+    color: var(--white);
+}
+
+/* typography */
+.heading{
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    color: var(--dark1);
+}
+.heading .line{
+    width: 50px;
+    height: 5px;
+    background: var(--pink);
+    margin: 0.5rem 0;
+}

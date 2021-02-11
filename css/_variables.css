@@ -1,0 +1,17 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;700&display=swap');
+
+/* variables */
+:root{
+
+    /* fonts */
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+
+    /* colors */
+    --pink: #ff40a6;
+    --dark1: #222;
+    --dark2: #666;
+    --light: #ddd;
+    --white: #fff;
+}

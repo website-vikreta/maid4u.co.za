@@ -1,0 +1,111 @@
+/* larger devices */
+@media (max-width: 1200px){
+    /* heading */
+    body{
+        font-size: 14px;
+    }
+    .how-works img{
+        max-height: 30px !important;
+    }
+}
+/* laptops */
+@media (max-width: 992px){
+
+}
+/* tablets */
+@media (max-width: 768px){
+    .container{
+        padding: 0 30px;
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+    /* navigation */
+    nav .logo{
+        width: 100% !important;
+        position: relative;
+        z-index: 1000;
+    }
+    nav .logo .toggle{
+        display: block !important;
+    }
+    nav .nav-tab{
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #fdfdfd;
+        z-index: 999;
+        transition: top 0.5s ease;
+    }
+    nav .nav-tab .nav-link{
+        margin: 1rem;
+        border-bottom: 1px solid transparent;
+    }
+    nav .nav-tab.active{
+        top: 0 !important;
+    }
+    /* hero */
+    section.hero .row{
+        flex-direction: column-reverse;
+    }
+    .hero img{
+        width: 70%;
+    }
+    .hero .hero-heading{
+        margin-top: 2rem;
+        font-size: 40px !important;
+    }
+    .hero .hero-para{
+        font-size: 0.9rem;
+    }
+    
+    /* trusted by */
+    .trusted-by .wrapper{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .trusted-by .wrapper img{
+        margin: 1rem;
+        width: 30%;
+        max-height: initial;
+    }
+
+    /* plans */
+    .plans .row{
+        margin-top: calc(50px - 1rem) !important;
+    }
+    .plans .card{
+        margin: 1rem 0;
+    }
+    .plans h3{
+        font-size: 1.2rem !important;
+    }
+    /* gallery */
+    .gallery{
+        padding-top: 0 !important;
+    }
+
+    /* how it works */
+    .how-works{
+        padding: 100px 30px !important;
+    }
+    .how-works .row{
+        margin-top: calc(20px - 1rem) !important;
+    }
+    .how-works [class*=col-]{
+        margin: 1rem 0;
+    }
+    .how-works img{
+        display: none;
+    }
+    
+}
+/* mobile */
+@media (max-width: 576px){
+
+}
