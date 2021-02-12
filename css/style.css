@@ -31,6 +31,9 @@ body{
     font-family: var(--primary-font);
     font-size: 16px;
 }
+html{
+    overflow-x: hidden;
+}
 
 /* some resets */
 .container{
@@ -230,6 +233,35 @@ section.hero{
     margin-top: 30px;
 }
 
+/* counter */
+.counter{
+    padding: 0 !important;
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.counter img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    z-index: -1;
+}
+.counter *{
+    margin: 0;
+    line-height: 100%;
+}
+.counter h3{
+    color: var(--dark1);
+    font-family: ver(--secondary-font);
+    font-weight: 600;
+}
+.counter p span{
+    color: var(--pink);
+    font-size: 50px;
+    font-weight: bold;
+}
+
 /* price chart */
 .plans{
     padding: 100px 0;
@@ -346,7 +378,7 @@ section.how-works{
 }
 
 /* gallery */
-.gallery{
+/* .gallery{
     padding: 100px 0;
     padding-top: 50px;
 }
@@ -363,7 +395,156 @@ section.how-works{
     margin: 0.5rem;
     border: none;
     border-radius: 0;
+} */
+
+/* gallery */
+.tgallery .heading{
+    text-align: center;
 }
+.tgallery .heading .line{
+    margin: 0.5rem auto;
+}
+.tgallery .wrapper{
+    max-width: 1200px;
+    padding: 50px 0 50px 0;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery .image{
+    padding: 7px;
+    width: calc(100% / 3);
+}
+.gallery .image span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+    transform: scale(1.1);
+}
+.preview-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+.preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+}
+.preview-box .details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+}
+.details .title p{
+    margin: 0 5px;
+}
+.details .title p.current-img{
+    font-weight: 500;
+}
+.details .icon{
+    color: #007bff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.preview-box .image-box{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.image-box .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    height: 50px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+}
+.slide.prev{
+    left: 0px;
+}
+.slide.next{
+    right: 0px;
+}
+.image-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.45);
+}
+  
+@media(max-width: 1000px){
+    .gallery{
+        padding: 0 30px;
+    }
+    .gallery .image{
+        width: calc(100% / 2);
+    }
+    .preview-box{
+        width: calc(100% - 60px);
+    }
+}
+@media(max-width: 600px){
+    .gallery .image{
+        width: 100%;
+        padding: 4px;
+    }
+}
+
+/* maid card */
+.maidcard{
+    padding: 100px 0;
+}
+.maidcard .heading{
+    text-align: center;
+}
+.maidcard .heading .line{
+    margin: auto;
+}
+.maidcard .row{
+    margin-top: 50px;
+}
+
+
+
 
 /* footer */
 footer{
@@ -373,6 +554,7 @@ footer{
     padding: 0.5rem;
     font-size: 0.8rem;
 }
+
 
 /* larger devices */
 @media (max-width: 1200px){
@@ -449,6 +631,11 @@ footer{
         margin: 1rem;
         width: 30%;
         max-height: initial;
+    }
+
+    /* counter */
+    .counter h3{
+        font-size: 1.2rem;
     }
 
     /* plans */

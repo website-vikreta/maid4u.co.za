@@ -75,6 +75,11 @@
         max-height: initial;
     }
 
+    /* counter */
+    .counter h3{
+        font-size: 1.2rem;
+    }
+
     /* plans */
     .plans .row{
         margin-top: calc(50px - 1rem) !important;
