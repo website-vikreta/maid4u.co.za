@@ -272,7 +272,7 @@ section.hero{
 
 /* price chart */
 .plans{
-    padding: 100px 0;
+    padding: 80px 0;
 }
 .plans .para{text-align: center;}
 
@@ -328,7 +328,7 @@ section.hero{
 
 /* how it works */
 section.how-works{
-    padding: 100px 0;
+    padding: 80px 0;
 }
 .how-works .heading{
     text-align: center;
@@ -539,7 +539,32 @@ section.how-works{
 
 /* maid card */
 .maidcard{
-    padding: 100px 0;
+    padding: 80px 0 50px 0;
+    position: relative !important;
+}
+.maidcard:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 400px;
+    background: var(--pink);
+    opacity: 0.05;
+    z-index: -1;
+}
+.maidcard:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 400px;
+    background: var(--pink);
+    opacity: 0.05;
+    z-index: -1;
 }
 .maidcard .heading{
     text-align: center;
@@ -566,7 +591,7 @@ section.how-works{
     background: white;
     transition: height 0.5s ease;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
-    height: calc(200px + 4.5rem);
+    height: calc(200px + 5rem);
     overflow: hidden;
 }
 .maidcard .card:hover{
