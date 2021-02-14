@@ -103,10 +103,8 @@ window.onload = () => {
                 nextBtn.style.display = "block";
                 previewBox.classList.remove("show");
                 shadow.style.display = "none";
-                document.querySelector("body").style.overflow = "scroll";
+                document.querySelector("body").style.overflow = "hidden";
             }
         }
-
     }
-
 }
