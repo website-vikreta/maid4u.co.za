@@ -108,6 +108,25 @@
     .how-works img{
         display: none;
     }
+
+    /* maidcard */
+    .maidcard .container .card{
+        max-width: initial !important;
+        width: 100% !important;
+        flex: initial !important;
+        height: 100% !important;
+        transition: initial;
+    }
+    .maidcard .container .card:hover{
+        height: initial;
+    }
+    .maidcard .card .bottom-text{
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    .maidcard .card .top-text .name{
+        border-color: var(--pink) !important;
+    }
     
 }
 /* mobile */

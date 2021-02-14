@@ -47,13 +47,21 @@ ul{list-style: none; margin: 0 !important; padding: 0 !important;}
 .btn{
     min-width: 120px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 3px;
     border: 1px solid var(--pink);
     font-size: 1rem;
 }
 .btn.solid{
     background: var(--pink);
     color: var(--white);
+}
+.btn:hover{
+    background: var(--pink);
+    color: white;
+}
+.btn.solid:hover{
+    background: var(--white);
+    color: initial;
 }
 
 /* typography */

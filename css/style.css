@@ -65,13 +65,21 @@ ul{list-style: none; margin: 0 !important; padding: 0 !important;}
 .btn{
     min-width: 120px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 3px;
     border: 1px solid var(--pink);
     font-size: 1rem;
 }
 .btn.solid{
     background: var(--pink);
     color: var(--white);
+}
+.btn:hover{
+    background: var(--pink);
+    color: white;
+}
+.btn.solid:hover{
+    background: var(--white);
+    color: initial;
 }
 
 /* typography */
@@ -543,7 +551,79 @@ section.how-works{
     margin-top: 50px;
 }
 
-
+.maidcard .container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1030px;
+    overflow: hidden !important;
+    padding: 50px 30px;
+}
+.maidcard .container .card{
+    margin: 10px;
+    flex: 1;
+    background: white;
+    transition: height 0.5s ease;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    height: calc(200px + 4.5rem);
+    overflow: hidden;
+}
+.maidcard .card:hover{
+    height: 450px;
+}
+.maidcard .card .img{
+    height: 200px;
+    width: 100%;
+}
+.maidcard .card .img img{
+    height: 100%;
+    width: 100%;
+}
+.maidcard .card .top-text{
+    padding: 1rem;
+    text-align: center;
+}
+.maidcard .card .top-text .name{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--dark1);
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+    font-family: var(--secondary-font);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.5s ease;
+}
+.maidcard .card:hover .top-text .name{
+    border-color: var(--pink);
+}
+.maidcard .card .top-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+}
+.maidcard .card .bottom-text{
+    padding: 1rem;
+    padding-top: 0 !important;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.maidcard .card:hover .bottom-text{
+    opacity: 1;
+    visibility: visible;
+}
+.maidcard .card h5{
+    font-weight: bold;
+    color: var(--pink);
+}
+.maidcard .card .bottom-text p{
+    margin: 0;
+    color: var(--dark2);
+    font-size: 0.9rem;
+}
 
 
 /* footer */
@@ -554,7 +634,6 @@ footer{
     padding: 0.5rem;
     font-size: 0.8rem;
 }
-
 
 /* larger devices */
 @media (max-width: 1200px){
@@ -665,6 +744,25 @@ footer{
     }
     .how-works img{
         display: none;
+    }
+
+    /* maidcard */
+    .maidcard .container .card{
+        max-width: initial !important;
+        width: 100% !important;
+        flex: initial !important;
+        height: 100% !important;
+        transition: initial;
+    }
+    .maidcard .container .card:hover{
+        height: initial;
+    }
+    .maidcard .card .bottom-text{
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    .maidcard .card .top-text .name{
+        border-color: var(--pink) !important;
     }
     
 }
